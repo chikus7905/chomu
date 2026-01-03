@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy New Year CHømû 🐼</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg">
+
+<!-- MUSIC -->
+<audio id="bgMusic" loop>
+    <source src="https://res.cloudinary.com/dzsougae8/video/upload/v1767452901/aujla_dv8x1k.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="hitSound">
+    <source src="music/thump.mp3" type="audio/mpeg">
+</audio>
+
+<!-- TAP TO ENTER -->
+<div id="enterScreen">
+    <h1>✨ Tap to Enter ✨</h1>
+    <p>A little surprise for you 💖</p>
+</div>
+
+<!-- HOME -->
+<section id="pageHome" class="page hidden">
+    <h1>✨ Happy New Year 2026 ✨</h1>
+    <h2>Hey CHømû 🐼</h2>
+    <p>✨ Before this year begins…
+I just want you to know
+you make every moment brighter 💖</p>
+    <button class="btn" id="goGift">Open Your Gift 🎁</button>
+</section>
+
+<!-- GIFT -->
+<section id="pageGift" class="page hidden">
+    <h2>🎁</h2>
+    <img src="images/gift.png" id="giftBox" class="gift">
+    <img src="https://res.cloudinary.com/dzsougae8/image/upload/v1767452788/rose_rfcc9i.png" id="surprise" class="rose hidden">
+    <button class="btn hidden" id="goMemories">Click 😁</button>
+</section>
+
+<!-- MEMORIES -->
+<section id="pageMemories" class="page hidden">
+    <h1 class="top-title"></h1>
+    <div class="fall-area">
+        <h2>🙈</h2>
+        <img src="images/1.jpeg" class="fall-card">
+        <img src="images/2.jpeg" class="fall-card">
+        <img src="images/3.jpeg" class="fall-card">
+        <img src="images/4.jpeg" class="fall-card">
+        <img src="images/5.jpeg" class="fall-card">
+        <img src="images/6.jpeg" class="fall-card">
+        <img src="https://res.cloudinary.com/dzsougae8/image/upload/v1767452792/7_luqr5y.png" class="fall-card">
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

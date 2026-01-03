@@ -1,0 +1,158 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+.bg{
+    background:linear-gradient(120deg,#0f2027,#203a43,#2c5364);
+    color:white;
+    min-height:100vh;
+    overflow:hidden;
+}
+
+.page{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hidden{display:none;}
+
+.btn{
+    margin-top:20px;
+    padding:14px 32px;
+    border:none;
+    border-radius:30px;
+    background:#ff5e8e;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{transform:scale(1.05);}
+
+#enterScreen{
+    position:fixed;
+    inset:0;
+    background:black;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    cursor:pointer;
+}
+
+/* Gift */
+.gift{width:200px;cursor:pointer;transition:0.4s;}
+.rose{width:250px;margin-top:20px;}
+
+/* Cards */
+.fall-area{position:relative;width:100%;height:100vh;}
+.fall-card{
+    position:absolute;
+    width:150px;
+    opacity:0;
+    top:-200px;
+    transition:2s ease;
+}
+
+/* Popup */
+.overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.7);
+    opacity:0;
+    pointer-events:none;
+    transition:0.3s;
+}
+.overlay.show{opacity:1;pointer-events:auto;}
+
+.popup-card{
+    position:fixed;
+    width:300px;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) scale(0);
+    transition:0.4s;
+    z-index:10;
+}
+.popup-card.show{transform:translate(-50%,-50%) scale(1);}
+
+/* Final */
+.final-message{
+    position:fixed;
+    inset:0;
+    background:black;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    opacity:0;
+    pointer-events:none;
+    transition:1s;
+}
+.final-message.show{opacity:1;pointer-events:auto;}
+
+.final-buttons{
+    margin-top:30px;
+    display:flex;
+    gap:20px;
+}
+
+.final-buttons button{
+    padding:12px 26px;
+    border:none;
+    border-radius:30px;
+    background:#ff5e8e;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+/* Animations */
+.fist{font-size:80px;transform:scale(0);}
+
+@keyframes fistPunch{
+    0%{transform:scale(0);}
+    60%{transform:scale(2);}
+    100%{transform:scale(1);}
+}
+
+@keyframes punchZoom{
+    0%{transform:scale(0.8);}
+    60%{transform:scale(1.3);}
+    100%{transform:scale(1);}
+}
+
+@keyframes hitShake{
+    0%{transform:translate(0,0);}
+    25%{transform:translate(-3px,2px);}
+    50%{transform:translate(3px,-2px);}
+    100%{transform:translate(0,0);}
+}
+
+.final-message.show{animation:hitShake 0.4s;}
+.final-message.show .fist{animation:fistPunch 0.6s forwards;}
+.final-message.show h1{animation:punchZoom 0.6s;}
+
+/* Mobile */
+@media(max-width:768px){
+    h1{font-size:22px;}
+    .gift{width:160px;}
+    .rose{width:250px;margin-top:0px;}
+    .fall-card{width:110px;}
+    .popup-card{width:85vw;}
+    .final-buttons{flex-direction:column;}
+}
